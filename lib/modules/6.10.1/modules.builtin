@@ -118,6 +118,7 @@ kernel/lib/asn1_decoder.ko
 kernel/lib/fonts/font.ko
 kernel/lib/oid_registry.ko
 kernel/lib/ucs2_string.ko
+kernel/drivers/pci/xen-pcifront.ko
 kernel/drivers/video/console/vgacon.ko
 kernel/drivers/video/backlight/backlight.ko
 kernel/drivers/video/fbdev/core/fb.ko
@@ -129,6 +130,7 @@ kernel/drivers/video/fbdev/core/sysfillrect.ko
 kernel/drivers/video/fbdev/core/syscopyarea.ko
 kernel/drivers/video/fbdev/core/sysimgblt.ko
 kernel/drivers/video/fbdev/core/fb_sys_fops.ko
+kernel/drivers/video/fbdev/xen-fbfront.ko
 kernel/drivers/video/fbdev/simplefb.ko
 kernel/drivers/acpi/ac.ko
 kernel/drivers/acpi/button.ko
@@ -144,10 +146,17 @@ kernel/drivers/virtio/virtio.ko
 kernel/drivers/virtio/virtio_ring.ko
 kernel/drivers/virtio/virtio_pci_modern_dev.ko
 kernel/drivers/virtio/virtio_pci_legacy_dev.ko
+kernel/drivers/virtio/virtio_mmio.ko
 kernel/drivers/virtio/virtio_pci.ko
 kernel/drivers/virtio/virtio_balloon.ko
 kernel/drivers/virtio/virtio_input.ko
 kernel/drivers/virtio/virtio_dma_buf.ko
+kernel/drivers/xen/xenbus/xenbus.ko
+kernel/drivers/xen/xenbus/xenbus_probe_frontend.ko
+kernel/drivers/xen/xen-evtchn.ko
+kernel/drivers/xen/xenfs/xenfs.ko
+kernel/drivers/xen/xen-privcmd.ko
+kernel/drivers/xen/grant-dma-ops.ko
 kernel/drivers/tty/n_null.ko
 kernel/drivers/tty/serial/serial_base.ko
 kernel/drivers/tty/serial/8250/8250.ko
@@ -161,11 +170,13 @@ kernel/drivers/char/virtio_console.ko
 kernel/drivers/char/nvram.ko
 kernel/drivers/char/hw_random/rng-core.ko
 kernel/drivers/char/hw_random/via-rng.ko
+kernel/drivers/char/hw_random/virtio-rng.ko
 kernel/drivers/char/agp/agpgart.ko
 kernel/drivers/char/agp/amd64-agp.ko
 kernel/drivers/char/agp/intel-agp.ko
 kernel/drivers/char/agp/intel-gtt.ko
 kernel/drivers/iommu/iova.ko
+kernel/drivers/iommu/virtio-iommu.ko
 kernel/drivers/gpu/drm/drm.ko
 kernel/drivers/gpu/drm/drm_panel_orientation_quirks.ko
 kernel/drivers/gpu/drm/drm_buddy.ko
@@ -180,6 +191,7 @@ kernel/drivers/connector/cn.ko
 kernel/drivers/base/firmware_loader/firmware_class.ko
 kernel/drivers/block/loop.ko
 kernel/drivers/block/virtio_blk.ko
+kernel/drivers/block/xen-blkfront.ko
 kernel/drivers/misc/mei/mei.ko
 kernel/drivers/misc/mei/mei-me.ko
 kernel/drivers/macintosh/mac_hid.ko
@@ -212,6 +224,7 @@ kernel/drivers/net/mdio/fwnode_mdio.ko
 kernel/drivers/net/tun.ko
 kernel/drivers/net/veth.ko
 kernel/drivers/net/virtio_net.ko
+kernel/drivers/net/ethernet/amazon/ena/ena.ko
 kernel/drivers/net/ethernet/broadcom/tg3.ko
 kernel/drivers/net/ethernet/broadcom/bnxt/bnxt_en.ko
 kernel/drivers/net/ethernet/intel/libeth/libeth.ko
@@ -228,6 +241,7 @@ kernel/drivers/net/ethernet/mellanox/mlx5/core/mlx5_core.ko
 kernel/drivers/net/ethernet/nvidia/forcedeth.ko
 kernel/drivers/net/ethernet/realtek/8139too.ko
 kernel/drivers/net/ethernet/realtek/r8169.ko
+kernel/drivers/net/xen-netfront.ko
 kernel/drivers/net/net_failover.ko
 kernel/drivers/cdrom/cdrom.ko
 kernel/drivers/pcmcia/pcmcia_core.ko
@@ -258,6 +272,7 @@ kernel/drivers/input/input-leds.ko
 kernel/drivers/input/evdev.ko
 kernel/drivers/input/keyboard/atkbd.ko
 kernel/drivers/input/mouse/psmouse.ko
+kernel/drivers/input/misc/xen-kbdfront.ko
 kernel/drivers/rtc/rtc-cmos.ko
 kernel/drivers/i2c/i2c-core.ko
 kernel/drivers/i2c/i2c-smbus.ko
@@ -338,6 +353,7 @@ kernel/net/802/psnap.ko
 kernel/net/802/stp.ko
 kernel/net/sched/sch_tbf.ko
 kernel/net/sched/cls_cgroup.ko
+kernel/net/netlink/netlink_diag.ko
 kernel/net/netfilter/nfnetlink.ko
 kernel/net/netfilter/nfnetlink_queue.ko
 kernel/net/netfilter/nfnetlink_log.ko
@@ -398,6 +414,7 @@ kernel/net/ipv6/netfilter/ip6_tables.ko
 kernel/net/ipv6/netfilter/ip6table_filter.ko
 kernel/net/ipv6/netfilter/ip6table_mangle.ko
 kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko
+kernel/net/ipv6/netfilter/nf_socket_ipv6.ko
 kernel/net/ipv6/netfilter/nf_reject_ipv6.ko
 kernel/net/ipv6/netfilter/nf_dup_ipv6.ko
 kernel/net/ipv6/netfilter/nft_reject_ipv6.ko
