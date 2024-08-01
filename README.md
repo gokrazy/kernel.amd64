@@ -51,14 +51,14 @@ git clone --depth=1 https://github.com/gokrazy/kernel.amd64
 cd kernel.amd64
 ```
 
-Install the kernel-related gokrazy tools:
+Install the kernel-related gokrazy tools into the `_build` directory:
 ```
-go install github.com/gokrazy/autoupdate/cmd/gokr-rebuild-kernel@latest
+GOBIN=$PWD/_build go install github.com/gokrazy/autoupdate/cmd/gokr-rebuild-kernel@latest
 ```
 
 And build a new kernel (takes about 5 minutes):
 ```
-(cd _build && gokr-rebuild-kernel)
+(cd _build && ./gokr-rebuild-kernel)
 ```
 
 The new kernel is stored in the working directory. Use `gok add .` to
