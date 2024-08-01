@@ -29,6 +29,7 @@ jobs:
       run: |
         sudo apt update && sudo apt install qemu-system-x86
         GOPROXY=direct go install github.com/gokrazy/autoupdate/cmd/...@latest
+        GOPROXY=direct GOBIN=$PWD/_build go install github.com/gokrazy/autoupdate/cmd/gokr-rebuild-kernel@latest
         GOPROXY=direct go install github.com/gokrazy/tools/cmd/gok@latest
         GOPROXY=direct go install github.com/gokrazy/bakery/cmd/qemubootery@latest
 
@@ -72,7 +73,7 @@ jobs:
         BOOTERY_URL: ${{ secrets.BOOTERY_URL }}
       if: ${{ env.GH_USER != 0 }}
       run: |
-        if ! gokr-has-label please-merge && ! gokr-has-label please-boot && ! gokr-has-label please-boot-qemu; then (cd _build && gokr-rebuild-kernel -overwrite_container_executable=docker) && gokr-amend -set_label=please-boot lib vmlinuz; fi
+        if ! gokr-has-label please-merge && ! gokr-has-label please-boot && ! gokr-has-label please-boot-qemu; then (cd _build && ./gokr-rebuild-kernel -overwrite_container_executable=docker) && gokr-amend -set_label=please-boot lib vmlinuz; fi
 
     - name: Merge if boot successful
       env:
