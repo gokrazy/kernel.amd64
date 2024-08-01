@@ -27,5 +27,5 @@ jobs:
 
     - name: Build kernel
       run: |
-        GOPROXY=direct go install github.com/gokrazy/autoupdate/cmd/gokr-rebuild-kernel@latest
-        (cd _build && gokr-rebuild-kernel)
+        GOPROXY=direct GOBIN=$PWD/_build go install github.com/gokrazy/autoupdate/cmd/gokr-rebuild-kernel@latest
+        (cd _build && ./gokr-rebuild-kernel)
