@@ -32,6 +32,5 @@ cat > ~/gokrazy/bakery/config.json <<EOT
     "KernelPackage": "github.com/gokrazy/kernel.amd64",
     "FirmwarePackage": "github.com/gokrazy/kernel.amd64",
     "EEPROMPackage": ""
-    }
 }
 EOT
