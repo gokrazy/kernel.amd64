@@ -368,11 +368,13 @@ kernel/net/netfilter/nft_ct.ko
 kernel/net/netfilter/nft_limit.ko
 kernel/net/netfilter/nft_nat.ko
 kernel/net/netfilter/nft_reject.ko
+kernel/net/netfilter/nft_reject_inet.ko
 kernel/net/netfilter/nft_log.ko
 kernel/net/netfilter/nft_masq.ko
 kernel/net/netfilter/nft_redir.ko
 kernel/net/netfilter/nft_hash.ko
 kernel/net/netfilter/nft_fib.ko
+kernel/net/netfilter/nft_fib_inet.ko
 kernel/net/netfilter/nft_chain_nat.ko
 kernel/net/netfilter/x_tables.ko
 kernel/net/netfilter/xt_tcpudp.ko
