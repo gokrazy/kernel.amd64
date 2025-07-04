@@ -1,1 +1,1 @@
-root=/dev/sda2 ro init=/gokrazy/init panic=10 oops=panic
+root=/dev/sda2 ro init=/gokrazy/init panic=10 oops=panic rootdelay=3 pci=nommconf
