@@ -244,6 +244,7 @@ kernel/drivers/net/ethernet/mellanox/mlx5/core/mlx5_core.ko
 kernel/drivers/net/ethernet/nvidia/forcedeth.ko
 kernel/drivers/net/ethernet/realtek/8139too.ko
 kernel/drivers/net/ethernet/realtek/r8169.ko
+kernel/drivers/net/wwan/wwan.ko
 kernel/drivers/net/xen-netfront.ko
 kernel/drivers/net/net_failover.ko
 kernel/drivers/cdrom/cdrom.ko
