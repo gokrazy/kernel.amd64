@@ -27,6 +27,9 @@ kernel/fs/isofs/isofs.ko
 kernel/fs/nfs/nfs.ko
 kernel/fs/nfs/nfsv3.ko
 kernel/fs/nfs/nfsv4.ko
+kernel/fs/nfs/filelayout/nfs_layout_nfsv41_files.ko
+kernel/fs/nfs/blocklayout/blocklayoutdriver.ko
+kernel/fs/nfs/flexfilelayout/nfs_layout_flexfiles.ko
 kernel/fs/exportfs/exportfs.ko
 kernel/fs/lockd/lockd.ko
 kernel/fs/nls/nls_base.ko
@@ -64,7 +67,7 @@ kernel/crypto/cbc.ko
 kernel/crypto/ctr.ko
 kernel/crypto/gcm.ko
 kernel/crypto/ccm.ko
-kernel/crypto/aes_generic.ko
+kernel/crypto/aes.ko
 kernel/crypto/authenc.ko
 kernel/crypto/authencesn.ko
 kernel/crypto/lzo.ko
