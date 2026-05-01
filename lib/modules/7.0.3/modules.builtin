@@ -395,6 +395,7 @@ kernel/net/netfilter/xt_NFLOG.ko
 kernel/net/netfilter/xt_MASQUERADE.ko
 kernel/net/netfilter/xt_SECMARK.ko
 kernel/net/netfilter/xt_TCPMSS.ko
+kernel/net/netfilter/xt_addrtype.ko
 kernel/net/netfilter/xt_comment.ko
 kernel/net/netfilter/xt_conntrack.ko
 kernel/net/netfilter/xt_multiport.ko
